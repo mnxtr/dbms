@@ -2,6 +2,13 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar.js';
 import OrderUpdateForm from './orders.js';
+import Dashboard from './components/Dashboard';
+import Inventory from './components/Inventory';
+import Orders from './components/Orders';
+import Production from './components/Production';
+import Products from './components/Products';
+import Settings from './components/Settings';
+
 
 function App() {
     return (
@@ -14,6 +21,7 @@ function App() {
                     <Route path="/orders" element={<Orders />} />
                     <Route path="/production" element={<Production />} />
                     <Route path="/settings" element={<Settings />} />
+                    <Route path='/products' element={<Products />} />
                 </Routes>
             </div>
         </Router>
@@ -30,6 +38,7 @@ const Orders = () => (
     </div>
 );
 const Production = () => <h1>Production</h1>;
+const Products = () => <h1>Products</h1>;
 const Settings = () => <h1>Settings</h1>;
 
 export default App;
